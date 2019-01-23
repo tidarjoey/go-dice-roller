@@ -1,1 +1,1 @@
-Simple app to roll dice with [Go](https://golang.org/){:target="_blank"}.
+Simple app to roll dice with <a href="https://golang.org/" target="_ blank">Go</a>.
