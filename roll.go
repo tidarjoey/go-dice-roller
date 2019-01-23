@@ -27,7 +27,7 @@ func main() {
   case "Y":
     // call roll()
     break
-  case "N"
+  case "N":
     // call okay we are ready when you are
     break
   }
