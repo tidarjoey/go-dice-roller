@@ -6,19 +6,17 @@ import (
     "time"
     "bufio"
     "os"
-    "strings"
+    //"strings"
 )
 
 func main() {
-  fmt.Print(
-    `=====================================
+  fmt.Println(`    =====================================
     Welcome to dice roller app!
     Are you ready to roll the dice? (Y/N)
-    =====================================`
-  )
+    =====================================`)
 
   reader := bufio.NewReader(os.Stdin)
-  resp, _, err := reader.ReadRune()
+  resp, err := reader.ReadString('\n')
 
   if err != nil {
     fmt.Println(err)
