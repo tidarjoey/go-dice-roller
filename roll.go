@@ -13,7 +13,6 @@ func main() {
 
 func randomString(int) int{
     result := randInt(1, 6)
-    //fmt.Println(result)
     return int(result)
 }
 
