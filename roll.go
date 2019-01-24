@@ -11,10 +11,10 @@ import (
 )
 
 func main() {
-  fmt.Println(`    =====================================
-    Welcome to dice roller app!
-    Are you ready to roll the dice? (Y/N)
-    =====================================`)
+  fmt.Println(`=====================================
+Welcome to dice roller app!
+Are you ready to roll the dice? (Y/N)
+=====================================`)
 
   reader := bufio.NewReader(os.Stdin)
   resp, err := reader.ReadString('\n')
@@ -29,10 +29,13 @@ func main() {
   switch resp {
   case "Y":
     roll()
+    fmt.Println(`Thanks, see you later!
+=====================================`)
     break
   case "N":
-    // call okay we are ready when you are
-    fmt.Println("kadieu2")
+    fmt.Println(`=====================================
+Okay thanks, we're ready when you are!
+=====================================`)
     break
   default:
     return
@@ -40,7 +43,8 @@ func main() {
 }
 
 func roll()  {
-  fmt.Println("Okay! rolling...")
+  fmt.Println(`=====================================
+Okay! rolling...`)
   rand.Seed(time.Now().UTC().UnixNano())
   result := strconv.Itoa(randomizer(10))
   fmt.Println("You got " + result)
