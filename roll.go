@@ -6,7 +6,8 @@ import (
     "time"
     "bufio"
     "os"
-    //"strings"
+    "strings"
+    "strconv"
 )
 
 func main() {
@@ -23,22 +24,29 @@ func main() {
     return
   }
 
+  resp = strings.Replace(resp, "\n", "", -1)
+
   switch resp {
   case "Y":
-    // call roll()
+    roll()
     break
   case "N":
     // call okay we are ready when you are
+    fmt.Println("kadieu2")
     break
+  default:
+    return
   }
 }
 
 func roll()  {
+  fmt.Println("Okay! rolling...")
   rand.Seed(time.Now().UTC().UnixNano())
-  fmt.Println(randomString(10))
+  result := strconv.Itoa(randomizer(10))
+  fmt.Println("You got " + result)
 }
 
-func randomString(int) int{
+func randomizer(int) int{
     result := randInt(1, 6)
     return int(result)
 }
